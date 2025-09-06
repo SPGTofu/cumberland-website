@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Flex, Heading, Slide, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Heading, Spacer } from "@chakra-ui/react";
 import Phone from "./Phone";
 import Address from "./Address";
 import Email from "./Email";
