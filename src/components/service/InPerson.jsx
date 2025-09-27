@@ -2,8 +2,8 @@ import { Heading, Text, Flex, Link } from '@chakra-ui/react';
 
 const InPerson = () => {
   return (
-    <Flex>
-      <Flex bg='green.500' justifyContent='center' alignItems='center' direction='column' w='55%' mb='8px' h='100%'>
+    <Flex flexDirection='row' flex='1'>
+      <Flex bg='green.500' justifyContent='center' alignItems='center' direction='column' w='55%'>
         <Heading size='xl' mb='16px'>
           Join Our Community At Church!
         </Heading>
