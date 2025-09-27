@@ -1,27 +1,10 @@
-import React from 'react';
-import { Box, Flex } from '@chakra-ui/react';
-import Navbar from '../components/navbar/Navbar';
+import PageWrapper from './PageWrapper';
 const TeamPage = () => {
-    return ( 
-        <Flex 
-            h = '100vh'
-            w = '100vw'
-            flexDirection = 'column'
-            bg = 'green.500'
-        >
-            <Box 
-                w = '100%'
-            >
-                <Navbar />
-            </Box>
-            <Box 
-                flex = '1'
-                bg = 'red.500'
-            >
-                <h1>Our Team</h1>
-            </Box>
-        </Flex>
-    );
+  return (
+    <PageWrapper>
+      <h1>Our Team</h1>
+    </PageWrapper>
+  );
 }
- 
+
 export default TeamPage;

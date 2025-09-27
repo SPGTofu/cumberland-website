@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Image, Spacer, Text, Textarea } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Box, Flex, Heading, Image, Spacer, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import facebookLogo from "../../assets/facebook_logo.png";
 import youtubeLogo from "../../assets/youtube_logo.png";
 const Online = () => {

@@ -1,25 +1,10 @@
-import { Box, Flex } from '@chakra-ui/react';
-import React from 'react';
-import Navbar from '../components/navbar/Navbar';
+import PageWrapper from './PageWrapper';
 
 const Homepage = () => {
     return (
-        <Flex 
-            flexDirection = 'column'
-            bg = 'green.500'
-        >
-            <Box 
-                w = '100%'
-            >
-                <Navbar />
-            </Box>
-            <Box 
-                flex = '1'
-                bg = 'red.500'
-            >
-                <h1>Homepage</h1>
-            </Box>
-        </Flex>
+      <PageWrapper>
+        <h1>Homepage</h1>
+      </PageWrapper>
     );
 }
  
