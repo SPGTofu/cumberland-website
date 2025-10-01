@@ -17,8 +17,8 @@ const NavItem = ({name, menuItems, navigation}) => {
                         alignItems = 'center'
                         _hover = {{ bg: '#EEEEEE', color: 'black' }} 
                         p = '12px'
-                        pl = '32px'
-                        pr = '32px'
+                        pl = '15px'
+                        pr = '15px'
                     >
                         <b>{name}</b>
                     </Box>
@@ -55,8 +55,8 @@ const NavItem = ({name, menuItems, navigation}) => {
             _hover = {{ bg: '#EEEEEE', color: 'black' }} 
             onClick = {() => navigate(navigation)}
             p = '12px'
-            pl = '32px'
-            pr = '32px'
+            pl = '15px'
+            pr = '15px'
         >
             <b>{name}</b>
         </Box>

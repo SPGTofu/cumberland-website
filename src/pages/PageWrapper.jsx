@@ -6,7 +6,7 @@ const PageWrapper = ({ children }) => {
   return (
     <Flex flexDirection="column" minH="100vh" w="100vw">
       <Navbar />
-      <Flex flex="1" flexDirection="column" bg="red.500">
+      <Flex flex="1" flexDirection="column" bg="white">
         {children}
       </Flex>
     </Flex>

@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@chakra-ui/react';
+import { Flex, Heading, Image, Box, Text} from '@chakra-ui/react';
 import React from 'react';
 import NavItem from './NavItem';
 import navigationItems from './NavItemList';
@@ -12,24 +12,42 @@ const Navbar = () => {
             />
         );
 
-
     return (  
         <Flex 
             flexDirection= 'Column'
-            backgroundColor = '#697184'
+            backgroundColor = '#ffffff'
             w = '100%'
             justify= 'center'
             align = 'center'
         >
             <Flex 
                 flex = '1'
-                p = '8px'
+                p = '65px'
             >
-                <Heading size = 'lg'>Korean Cumberland Presbyterian Church</Heading>
+            <Image
+                src = "/public/remakelogo.png"
+                alt = 'logo'
+                w = '300px'
+                h = '250px'
+                position = 'absolute'
+                left = '20px'
+                top = '-30px'
+            />
+            <Heading
+                fontSize = '30px'
+                position = 'absolute'
+                right = '20px'
+                top = '10px'
+            >
+                English / 한국어
+            </Heading>
             </Flex>
 
             <Flex justifyContent = 'flex-end'
-                  fontSize= 'xl'
+                  fontSize= '30px'
+                  position = 'absolute'
+                  right = '20px'
+                  top = '60px'
 
             >
                 {listOfNavItems} 
