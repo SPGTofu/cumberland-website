@@ -1,13 +1,12 @@
 import PageWrapper from './PageWrapper';
 import { Box, Text, Image } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Homepage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     "/public/photo1.jpg",
-    "/public/Photo2.jpg", 
+    "/public/photo2.jpg", 
     "/public/group.JPEG"
   ];
 
