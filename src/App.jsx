@@ -6,7 +6,6 @@ import AboutUs from './pages/AboutUs'
 import TeamPage from './pages/TeamPage'
 import VisionPage from './pages/VisionPage'
 import ServicePage from './pages/ServicePage'
-import EventsPage from './pages/EventsPage'
 import ContactPage from './pages/ContactPage'
 import theme from './theme'
 
@@ -20,7 +19,6 @@ function App() {
           <Route path = "/our-team" element = {<TeamPage />} />
           <Route path = "/vision" element = {<VisionPage />} />
           <Route path = "/attend-service" element = {<ServicePage />} />
-          <Route path = "/events" element = {<EventsPage />} />
           <Route path = "/contact-us" element = {<ContactPage />} />
         </Routes>
       </BrowserRouter>

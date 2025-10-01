@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const PageWrapper = ({ children }) => {
   return (
-    <Flex flexDirection="column" minH="100vh" w="100vw">
+    <Flex flexDirection="column" minH="100vh" w="100vw" overflowX='hidden'>
       <Navbar />
       <Flex flex="1" flexDirection="column" bg="white">
         {children}
