@@ -5,15 +5,15 @@ import { useState, useEffect } from 'react';
 const Homepage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
-    "/public/photo1.jpg",
-    "/public/photo2.jpg", 
-    "/public/group.JPEG"
+    "/photo1.jpg",
+    "/photo2.jpg", 
+    "/group.JPEG"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 3000); // Change every 3 seconds
+    }, 4000); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
