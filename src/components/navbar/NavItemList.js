@@ -7,7 +7,7 @@ const navigationItems = [
 
   {
     name: 'About Us',
-    menuItems: ['Who We Are', 'Our Team', 'Our Vision'],
+    menuItems: ['Who We Are', 'Our Team', 'Our Beliefs'],
     navigation: ['/about-us', '/our-team', '/vision'],
   },
 

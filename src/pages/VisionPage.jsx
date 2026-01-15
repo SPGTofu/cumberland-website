@@ -3,7 +3,7 @@ import PageWrapper from './PageWrapper';
 const VisionPage = () => {
   return (
     <PageWrapper>
-      <h1>Our Vision</h1>
+      <h1>Our Beliefs</h1>
     </PageWrapper>
   );
 }
