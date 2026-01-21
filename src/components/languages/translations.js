@@ -9,4 +9,22 @@ const translations = {
   }
 }
 
-export default translations;
+const contactPageTranslations = {
+  en: {
+    contactUs: "Contact Us",
+    address: "Address",
+    phone: "Phone",
+    email: "Email"
+  },
+  ko: {
+    contactUs: "문의하기",
+    address: "주소",
+    phone: "전화 번호",
+    email: "이메일"
+  }
+}
+
+export {
+  contactPageTranslations,
+  translations
+};
