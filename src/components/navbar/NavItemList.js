@@ -1,28 +1,25 @@
-import translations from '../languages/translations';
-
-const lang = (typeof window !== 'undefined' && window.localStorage.getItem('lang')) || 'en';
-const tr = (node) => (node?.[lang] || node?.en || '').trim();
+import { translate } from "../languages/translations";
 
 const navigationItems = [
   {
-    name: tr(translations.nav?.home),
+    name: translate('nav.home'),
     navigation: '/',
   },
   {
-    name: tr(translations.nav?.about),
+    name: translate('nav.about'),
     menuItems: [
-      tr(translations.nav?.aboutItems?.whoWeAre),
-      tr(translations.nav?.aboutItems?.ourTeam),
-      tr(translations.nav?.aboutItems?.ourBeliefs),
+      translate('nav.aboutItems.whoWeAre'),
+      translate('nav.aboutItems.ourTeam'),
+      translate('nav.aboutItems.ourBeliefs'),
     ],
     navigation: ['/about-us', '/our-team', '/vision'],
   },
   {
-    name: tr(translations.nav?.joinUs),
+    name: translate('nav.joinUs'),
     navigation: '/attend-service',
   },
   {
-    name: tr(translations.nav?.contactUs),
+    name: translate('nav.contactUs'),
     navigation: '/contact-us',
   },
 ];

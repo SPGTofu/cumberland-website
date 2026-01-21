@@ -1,4 +1,4 @@
-export const languages = Object.freeze({
-  ENGLISH: Symbol("en"),
-  KOREAN: Symbol("ko")
+export const languagesEnum = Object.freeze({
+  ENGLISH: "en",
+  KOREAN: "ko"
 })

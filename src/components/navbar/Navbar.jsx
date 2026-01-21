@@ -1,16 +1,11 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
 import NavItem from './NavItem';
 import navigationItems from './NavItemList';
+import { getLanguage, setLanguage } from '../languages/translations';
+import { languagesEnum } from '../languages/context';
 
 const Navbar = () => {
-  const lang = (typeof window !== 'undefined' && window.localStorage.getItem('lang')) || 'en';
-  const setLang = (newLang) => {
-    try {
-      window.localStorage.setItem('lang', newLang);
-    } finally {
-      window.location.reload();
-    }
-  };
+  const lang = getLanguage();
 
   const listOfNavItems = navigationItems.map((item) => (
     <NavItem
@@ -46,9 +41,9 @@ const Navbar = () => {
           <Text
             fontSize="20px"
             cursor="pointer"
-            fontWeight={lang === 'en' ? 'bold' : 'normal'}
-            textDecoration={lang === 'en' ? 'underline' : 'none'}
-            onClick={() => setLang('en')}
+            fontWeight={lang === languagesEnum.ENGLISH ? 'bold' : 'normal'}
+            textDecoration={lang === languagesEnum.ENGLISH ? 'underline' : 'none'}
+            onClick={() => setLanguage(languagesEnum.ENGLISH)}
           >
             English
           </Text>
@@ -56,9 +51,9 @@ const Navbar = () => {
           <Text
             fontSize="20px"
             cursor="pointer"
-            fontWeight={lang === 'kor' ? 'bold' : 'normal'}
-            textDecoration={lang === 'kor' ? 'underline' : 'none'}
-            onClick={() => setLang('kor')}
+            fontWeight={lang === languagesEnum.KOREAN ? 'bold' : 'normal'}
+            textDecoration={lang === languagesEnum.KOREAN ? 'underline' : 'none'}
+            onClick={() => setLanguage(languagesEnum.KOREAN)}
           >
             한국어
           </Text>
