@@ -60,14 +60,6 @@ const Homepage = () => {
         </Box>
         </Box>
       </Box>
-
-      <Box w="100%">
-        <Text fontSize="1rem" color="black" textAlign="center" background="#b5a191">
-          Copyright 2017 Korean United Presbyterian Church of Springfield. All Rights Reserved.<br/>
-          1234 JohnsHouse Ave Springfield MO, 43213<br/>
-          Tel. 123-456-7891 | Fax. 123-456-7891 | cumberlandchurch@gmail.com<br/>
-        </Text>
-      </Box>
     </PageWrapper>
   );
 }

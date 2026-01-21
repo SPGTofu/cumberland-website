@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react"
 import Navbar from "../components/navbar/Navbar"
 import PropTypes from "prop-types";
+import Footer from "../components/footer";
 
 const PageWrapper = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const PageWrapper = ({ children }) => {
       <Flex flex="1" flexDirection="column" bg="white">
         {children}
       </Flex>
+      <Footer />
     </Flex>
   )
 }

@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, Input, Text, Textarea } from '@chakra-ui/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MessageContainer = () => {
   const [name, setName] = useState('');
@@ -21,7 +22,7 @@ const MessageContainer = () => {
 
       <Flex flex = '1' justifyContent = 'center' alignItems = 'center' flexDirection = 'column'>
         <Box w = '60%'>
-          <Text w = '10%' fontWeight = 'bold' pb = '8px'>
+          <Text w = '10%' fontWeight = 'bold' pb = '1rem'>
             Name:
           </Text>
           <Input
@@ -29,7 +30,7 @@ const MessageContainer = () => {
             onChange = {(event) => setName(event.target.value)}
           />
 
-          <Text w = '10%' fontWeight = 'bold' pt = '16px' pb = '8px'>
+          <Text w = '10%' fontWeight = 'bold' pt = '16px' pb = '1rem'>
             Email:
           </Text>
           <Input 
@@ -37,7 +38,7 @@ const MessageContainer = () => {
             onChange = {(event) => setEmail(event.target.value)}
           />
 
-          <Text w = '12%' fontWeight = 'bold' pt = '16px' pb = '8px'>
+          <Text w = '12%' fontWeight = 'bold' pt = '16px' pb = '1rem'>
             Subject
           </Text>
           <Input 
@@ -45,7 +46,7 @@ const MessageContainer = () => {
             onChange = {(event) => setSubject(event.target.value)}
           />
 
-          <Text w = '14%' fontWeight = 'bold' pt = '16px' pb = '8px'>
+          <Text w = '14%' fontWeight = 'bold' pt = '2rem' pb = '1rem'>
             Message
           </Text>
           <Textarea
@@ -55,7 +56,16 @@ const MessageContainer = () => {
           />
         </Box>
 
-        <Button mt = '20px' w = '10%' onClick = {handleSubmit}>
+        <Link
+          to='#'
+          onClick={(e) => {
+              window.location.href = 'mailto:j243982p@gmail.com';
+              e.preventDefault();
+          }}
+        >
+          Submit
+        </Link>
+        <Button mt = '3rem' w = '10%' onClick = {handleSubmit}>
           Submit
         </Button>
       </Flex>
