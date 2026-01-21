@@ -1,23 +1,28 @@
-//add navbar items here
+import translations from '../languages/translations';
+
+const lang = (typeof window !== 'undefined' && window.localStorage.getItem('lang')) || 'en';
+const tr = (node) => (node?.[lang] || node?.en || '').trim();
+
 const navigationItems = [
   {
-    name: 'Home',
+    name: tr(translations.nav?.home),
     navigation: '/',
   },
-
   {
-    name: 'About Us',
-    menuItems: ['Who We Are', 'Our Team', 'Our Beliefs'],
+    name: tr(translations.nav?.about),
+    menuItems: [
+      tr(translations.nav?.aboutItems?.whoWeAre),
+      tr(translations.nav?.aboutItems?.ourTeam),
+      tr(translations.nav?.aboutItems?.ourBeliefs),
+    ],
     navigation: ['/about-us', '/our-team', '/vision'],
   },
-
   {
-    name: 'Join Us',
+    name: tr(translations.nav?.joinUs),
     navigation: '/attend-service',
   },
-
   {
-    name: 'Contact Us',
+    name: tr(translations.nav?.contactUs),
     navigation: '/contact-us',
   },
 ];
