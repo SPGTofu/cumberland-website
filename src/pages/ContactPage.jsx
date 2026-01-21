@@ -4,6 +4,7 @@ import MessageContainer from '../components/contact-us/MessageContainer';
 import PageWrapper from './PageWrapper';
 
 const ContactPage = () => {
+
   return (
     <PageWrapper>
       <Box w='100%' h='50%' bg='#D8CFD0'>
