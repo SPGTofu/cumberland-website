@@ -11,7 +11,7 @@ export const translations = {
       aboutItems: {
         whoWeAre: "Who We Are",
         ourTeam: "Our Team",
-        ourBeliefs: "Our Beliefs",
+        ourBeliefs: "Our Vision",
       },
     },
 
