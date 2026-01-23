@@ -1,14 +1,14 @@
-import { Heading, Text, Flex, Link } from '@chakra-ui/react';
+import { Text, Flex, Link } from '@chakra-ui/react';
 
 const InPerson = () => {
   return (
     <Flex flexDirection='row' flex='1'>
-      <Flex bg='green.500' justifyContent='center' alignItems='center' direction='column' w='55%'>
-        <Heading size='xl' mb='16px'>
-          Join Our Community At Church!
-        </Heading>
-        <Text fontSize='lg' fontWeight='bold' mb='48px'>
-          Service begins at 12:00PM on Sundays with communal lunch afterward.
+      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '55%', paddingX: '10rem' }}>
+        <Text textStyle='h2' b='16px'>
+          Join Us In Person
+        </Text>
+        <Text textStyle='h4' sx={{ marginBottom: '3rem', fontWeight: '600', color: 'gray.600' }}>
+          Our Sunday service starts at 12:00 PM, followed by a shared lunch and time to connect!
         </Text>
         <Link
           fontSize='lg'
@@ -20,7 +20,7 @@ const InPerson = () => {
           Springfield, MO 65804
         </Link>
       </Flex>
-      <Flex bg='blue.500' justifyContent='center' alignItems='center' w='45%'>
+      <Flex sx={{ bg: 'gray.100', justifyContent: 'center', alignItems: 'center', width: '45%' }}>
         Holder for Image
       </Flex>
     </Flex>

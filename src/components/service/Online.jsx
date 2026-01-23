@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import facebookLogo from "../../assets/facebook_logo.png";
 import youtubeLogo from "../../assets/youtube_logo.png";
@@ -15,55 +15,61 @@ const Online = () => {
   }
 
   return (  
-    <Flex flexDirection = 'row' flex='1'>
-      <Flex bg = 'blue.500' justifyContent = 'center' alignItems = 'center' w = '45%'>
+    <Flex sx={{ flexDirection: 'row', flex: '1' }}>
+      <Flex sx={{ bg: 'gray.100', justifyContent: 'center', alignItems: 'center', width: '45%' }}>
         Holder for Image
       </Flex>
-      <Flex bg = 'yellow.500' justifyContent = 'center' alignItems = 'center' w = '55%'>
-        <Flex direction = 'column' justifyContent = 'center' alignItems = 'center'>
-          <Heading size = 'xl' mb = '8px'>
-            Join Us Through Our Online Platforms!
-          </Heading>
-          <Text mb = '48px' fontWeight = 'bold' fontSize = 'xl'>
+      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', width: '55%', paddingX: '10rem' }}>
+        <Flex sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <Text textStyle='h2' sx={{ marginBottom: '0.5rem', color: 'gray.800' }}>
+            Join Us Online
+          </Text>
+          <Text textStyle='h4' sx={{ marginBottom: '3rem', fontWeight: '600', color: 'gray.600' }}>
             Live streams begin at 12:00PM CST on Sundays.
           </Text>
-          <Flex direction = 'row'>
-            <Flex direction = 'column' alignItems = 'center' justifyContent = 'center'>
+          <Flex sx={{ flexDirection: 'row' }}>
+            <Flex sx={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <Box
-                _hover = {{cursor: 'pointer'}}
+                sx={{
+                  cursor: 'pointer',
+                  marginBottom: '0.25rem',
+                  borderRadius: 'md',
+                  _hover: { opacity: 0.5 }
+                }}
                 onMouseEnter = {() => setIsHoveringFacebook(true)}
                 onMouseLeave = {() => setIsHoveringFacebook(false)}
                 onClick = {handleFacebookClick}
-                mb = '4px'
               >
                 <Image
+                  sx={{ width: '3.125rem', height: '3.125rem' }}
                   src = {facebookLogo}
                   alt = 'facebook'
-                  w = '50px'
-                  h = '50px'
                 />
               </Box>
-              <Text fontSize = 'lg'>
+              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringFacebook ? 0.5 : 1) }}>
                 Facebook
               </Text>
             </Flex>
-            <Spacer w = '80px'/>
-            <Flex direction = 'column' alignItems = 'center' justifyContent = 'center'>
+            <Spacer sx={{ width: '5rem' }}/>
+            <Flex sx={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <Box
-                _hover = {{cursor: 'pointer'}}
+                sx={{
+                  cursor: 'pointer',
+                  marginBottom: '0.25rem',
+                  borderRadius: 'md',
+                  _hover: { opacity: 0.5 }
+                }}
                 onMouseEnter = {() => setIsHoveringYoutube(true)}
                 onMouseLeave = {() => setIsHoveringYoutube(false)}
                 onClick = {handleYoutubeClick}
-                mb = '4px'
               >
                 <Image
                   src = {youtubeLogo}
                   alt = 'YouTube'
-                  w = '60px'
-                  h = '50px'
+                  sx={{ width: '3.75rem', height: '3.125rem' }}
                 />
               </Box>
-              <Text fontSize = 'lg'>
+              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringYoutube ? 0.5 : 1 )}}>
                 YouTube
               </Text>
             </Flex>
