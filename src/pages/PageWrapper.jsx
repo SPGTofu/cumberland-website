@@ -11,8 +11,9 @@ const PageWrapper = ({
   return (
     <Flex
       flexDirection="column"
-      h={height ?? "100vh"}
+      h={height ?? "100%"}
       w={width ?? "100vw"}
+      maxW="100vw"
       overflowX='hidden'
     >
       <Navbar />

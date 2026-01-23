@@ -1,5 +1,6 @@
-import { Box, Popover, PopoverContent, PopoverTrigger } from "@chakra-ui/react";
+import { Popover, PopoverContent, PopoverTrigger, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import PropTypes, { any, string } from "prop-types";
 
 const NavItem = ({name, menuItems, navigation}) => {
     const navigate = useNavigate();
@@ -11,36 +12,45 @@ const NavItem = ({name, menuItems, navigation}) => {
                 trigger = 'hover'
             >
                 <PopoverTrigger>
-                    <Box
-                        display = 'flex'
-                        justifyContent = 'center'
-                        alignItems = 'center'
-                        _hover = {{ bg: '#EEEEEE', color: 'black' }} 
-                        p = '12px'
-                        pl = '15px'
-                        pr = '15px'
+                    <Text
+                        textStyle='h3'
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            px: '2rem',
+                            py: '1rem',
+                            cursor: 'pointer',
+                            _hover: { opacity: 0.5 },
+                        }}
                     >
-                        <b>{name}</b>
-                    </Box>
+                        {name}
+                    </Text>
                 </PopoverTrigger>
                 <PopoverContent
-                    borderRadius = '0px'
-                    mt = '-8px'
-                    w = '100%'
+                    sx={{
+                        borderRadius: '0rem',
+                        mt: '-0.5rem',
+                        width: '100%',
+                    }}
                 >
                     {menuItems.map((item, index) => (
-                        <Box
+                        <Text
+                            textStyle='h3'
                             key = {index}
-                            display = 'flex'
-                            justifyContent = 'left'
-                            alignItems = 'left'
-                            _hover = {{ bg: '#EEEEEE', color: 'black' }} 
-                            p = '8px'
-                            pr = '30px'
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'flex-start',
+                                alignItems: 'center',
+                                px: '2rem',
+                                py: '0.5rem',
+                                cursor: 'pointer',
+                                _hover: { opacity: 0.5 },
+                            }}
                             onClick = {() => navigate(navigation[index])}
                         >
-                            <b>{item}</b>
-                        </Box>
+                            {item}
+                        </Text>
                     ))}
                 </PopoverContent>
             </Popover>
@@ -48,19 +58,28 @@ const NavItem = ({name, menuItems, navigation}) => {
     }
 
     return (  
-        <Box
-            display = 'flex'
-            justifyContent = 'center'
-            alignItems = 'center'
-            _hover = {{ bg: '#EEEEEE', color: 'black' }} 
+        <Text
+            textStyle='h3'
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                px: '2rem',
+                py: '1rem',
+                cursor: 'pointer',
+                _hover: { opacity: 0.5 },
+
+            }}
             onClick = {() => navigate(navigation)}
-            p = '12px'
-            pl = '15px'
-            pr = '15px'
         >
-            <b>{name}</b>
-        </Box>
+            {name}
+        </Text>
     );
 }
  
+NavItem.propTypes = {
+    name: PropTypes.string,
+    menuItems: PropTypes.arrayOf(any),
+    navigation: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(string)])
+}
 export default NavItem;
