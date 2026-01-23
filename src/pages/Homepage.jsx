@@ -1,7 +1,7 @@
 import PageWrapper from './PageWrapper';
 import { Box, Text } from '@chakra-ui/react';
 import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
-import ImageRotator from '../components/ImageRotator';
+import ImageRotator from '../components/Image/ImageRotator';
 import { translate } from '../components/languages/translations';
 
 const Homepage = () => {
