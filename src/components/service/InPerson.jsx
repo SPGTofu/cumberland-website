@@ -3,7 +3,7 @@ import { Heading, Text, Flex, Link } from '@chakra-ui/react';
 const InPerson = () => {
   return (
     <Flex flexDirection='row' flex='1'>
-      <Flex bg='green.500' justifyContent='center' alignItems='center' direction='column' w='55%'>
+      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '55%' }}>
         <Heading size='xl' mb='16px'>
           Join Our Community At Church!
         </Heading>
@@ -20,7 +20,7 @@ const InPerson = () => {
           Springfield, MO 65804
         </Link>
       </Flex>
-      <Flex bg='blue.500' justifyContent='center' alignItems='center' w='45%'>
+      <Flex sx={{ bg: 'gray.50', justifyContent: 'center', alignItems: 'center', width: '45%' }}>
         Holder for Image
       </Flex>
     </Flex>
