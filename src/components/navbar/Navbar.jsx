@@ -23,6 +23,7 @@ const Navbar = () => {
       w="100%"
       justify="center"
       align="center"
+      zIndex='10000'
     >
       <Flex 
         flex="1"

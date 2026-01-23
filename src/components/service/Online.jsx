@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import facebookLogo from "../../assets/facebook_logo.png";
 import youtubeLogo from "../../assets/youtube_logo.png";
@@ -19,12 +19,12 @@ const Online = () => {
       <Flex sx={{ bg: 'gray.100', justifyContent: 'center', alignItems: 'center', width: '45%' }}>
         Holder for Image
       </Flex>
-      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', width: '55%' }}>
+      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', width: '55%', paddingX: '10rem' }}>
         <Flex sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Heading size = 'xl' sx={{ marginBottom: '0.5rem', color: 'gray.800' }}>
-            Join Us Through Our Online Platforms!
-          </Heading>
-          <Text sx={{ marginBottom: '3rem', fontWeight: '600', fontSize: 'lg', color: 'gray.600' }}>
+          <Text textStyle='h2' sx={{ marginBottom: '0.5rem', color: 'gray.800' }}>
+            Join Us Online
+          </Text>
+          <Text textStyle='h4' sx={{ marginBottom: '3rem', fontWeight: '600', color: 'gray.600' }}>
             Live streams begin at 12:00PM CST on Sundays.
           </Text>
           <Flex sx={{ flexDirection: 'row' }}>
@@ -34,7 +34,7 @@ const Online = () => {
                   cursor: 'pointer',
                   marginBottom: '0.25rem',
                   borderRadius: 'md',
-                  _hover: { bg: 'gray.100' }
+                  _hover: { opacity: 0.5 }
                 }}
                 onMouseEnter = {() => setIsHoveringFacebook(true)}
                 onMouseLeave = {() => setIsHoveringFacebook(false)}
@@ -46,7 +46,7 @@ const Online = () => {
                   alt = 'facebook'
                 />
               </Box>
-              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700' }}>
+              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringFacebook ? 0.5 : 1) }}>
                 Facebook
               </Text>
             </Flex>
@@ -57,7 +57,7 @@ const Online = () => {
                   cursor: 'pointer',
                   marginBottom: '0.25rem',
                   borderRadius: 'md',
-                  _hover: { bg: 'gray.100' }
+                  _hover: { opacity: 0.5 }
                 }}
                 onMouseEnter = {() => setIsHoveringYoutube(true)}
                 onMouseLeave = {() => setIsHoveringYoutube(false)}
@@ -69,7 +69,7 @@ const Online = () => {
                   sx={{ width: '3.75rem', height: '3.125rem' }}
                 />
               </Box>
-              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700' }}>
+              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringYoutube ? 0.5 : 1 )}}>
                 YouTube
               </Text>
             </Flex>
