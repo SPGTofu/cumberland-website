@@ -51,7 +51,12 @@ export const translations = {
 
     ourBeliefs: {},
     joinUs: {},
-    contactPage: {},
+    contactPage: {
+      title: 'Contact Us',
+      address: 'Address',
+      phone: 'Phone',
+      email: 'Email',
+    },
   },
 
   [languagesEnum.KOREAN]: {
@@ -103,7 +108,12 @@ export const translations = {
 
     ourBeliefs: {},
     joinUs: {},
-    contactPage: {},
+    contactPage: {
+      title: '문의하기',
+      address: '주소',
+      phone: '핸드폰',
+      email: '이메일',
+    },
   },
 };
 

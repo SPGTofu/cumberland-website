@@ -4,7 +4,7 @@ import PageWrapper from "./PageWrapper";
 
 const Service = () => {
   return (
-    <PageWrapper height={'150vh'}>
+    <PageWrapper>
         <Online />
         <InPerson />
     </PageWrapper>
