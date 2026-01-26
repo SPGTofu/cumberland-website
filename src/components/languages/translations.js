@@ -50,7 +50,14 @@ export const translations = {
     },
 
     ourBeliefs: {},
-    joinUs: {},
+    joinUs: {
+      onlineTitle: 'Join Us Online',
+      inPersonTitle: 'Join Us In Person',
+      onlineSubtitle: 'Live streams begin at 12:00PM CST on Sundays.',
+      inPersonSubtitle: 'Our Sunday service starts at 12:00 PM, followed by a shared lunch and time to connect!',
+      facebook: 'Facebook',
+      youtube: 'Youtube'
+    },
     contactPage: {
       title: 'Contact Us',
       address: 'Address',
@@ -107,10 +114,17 @@ export const translations = {
     },
 
     ourBeliefs: {},
-    joinUs: {},
+    joinUs: {
+      onlineTitle: '온라인으로 참여하세요',
+      inPersonTitle: '직접 참여하세요',
+      onlineSubtitle: '라이브 스트리밍은 매주 일요일 오후 12시(중부 표준시)에 시작됩니다.',
+      inPersonSubtitle: '저희 주일 예배는 오후 12시에 시작하며, 예배 후에는 함께 점심 식사를 나누고 교제하는 시간을 갖습니다!',
+      facebook: '페이스북',
+      youtube: '유튜브'
+    },
     contactPage: {
       title: '문의하기',
-      address: '주소',
+      address: '직접 참여하세요',
       phone: '핸드폰',
       email: '이메일',
     },

@@ -2,6 +2,7 @@ import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import facebookLogo from "../../assets/facebook_logo.png";
 import youtubeLogo from "../../assets/youtube_logo.png";
+import { translate } from "../languages/translations";
 const Online = () => {
   const [isHoveringYoutube, setIsHoveringYoutube] = useState(false);
   const [isHoveringFacebook, setIsHoveringFacebook] = useState(false);
@@ -19,13 +20,13 @@ const Online = () => {
       <Flex sx={{ bg: 'gray.100', justifyContent: 'center', alignItems: 'center', width: '45%' }}>
         Holder for Image
       </Flex>
-      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', width: '55%', paddingX: '10rem' }}>
+      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', width: '55%', paddingX: '15rem' }}>
         <Flex sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Text textStyle='h2' sx={{ marginBottom: '0.5rem', color: 'gray.800' }}>
-            Join Us Online
+          <Text textStyle='h2' sx={{ mb: '1rem', color: 'gray.800' }}>
+            {translate('joinUs.onlineTitle')}
           </Text>
           <Text textStyle='h4' sx={{ marginBottom: '3rem', fontWeight: '600', color: 'gray.600' }}>
-            Live streams begin at 12:00PM CST on Sundays.
+            {translate('joinUs.onlineSubtitle')}
           </Text>
           <Flex sx={{ flexDirection: 'row' }}>
             <Flex sx={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -47,7 +48,7 @@ const Online = () => {
                 />
               </Box>
               <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringFacebook ? 0.5 : 1) }}>
-                Facebook
+                {translate('joinUs.facebook')}
               </Text>
             </Flex>
             <Spacer sx={{ width: '5rem' }}/>
@@ -70,7 +71,7 @@ const Online = () => {
                 />
               </Box>
               <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringYoutube ? 0.5 : 1 )}}>
-                YouTube
+                {translate('joinUs.youtube')}
               </Text>
             </Flex>
           </Flex>

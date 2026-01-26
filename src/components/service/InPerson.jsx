@@ -1,14 +1,15 @@
 import { Text, Flex, Link } from '@chakra-ui/react';
+import { translate } from '../languages/translations';
 
 const InPerson = () => {
   return (
-    <Flex flexDirection='row' flex='1'>
-      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '55%', paddingX: '10rem' }}>
-        <Text textStyle='h2' b='16px'>
-          Join Us In Person
+    <Flex sx={{ flexDirection: 'row', flex: '1' }}>
+      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '55%', paddingX: '15rem' }}>
+        <Text textStyle='h2' sx={{ mb: '1rem', color: 'gray.800' }}>
+          {translate('joinUs.inPersonTitle')}
         </Text>
         <Text textStyle='h4' sx={{ marginBottom: '3rem', fontWeight: '600', color: 'gray.600' }}>
-          Our Sunday service starts at 12:00 PM, followed by a shared lunch and time to connect!
+          {translate('joinUs.inPersonSubtitle')}
         </Text>
         <Link
           fontSize='lg'
