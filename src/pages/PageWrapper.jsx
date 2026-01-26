@@ -3,21 +3,11 @@ import Navbar from "../components/navbar/Navbar"
 import PropTypes from "prop-types";
 import Footer from "../components/footer";
 
-const PageWrapper = ({
-  height,
-  width,
-  children
-}) => {
+const PageWrapper = ({ children }) => {
   return (
-    <Flex
-      flexDirection="column"
-      h={height ?? "100%"}
-      w={width ?? "100vw"}
-      maxW="100vw"
-      overflowX='hidden'
-    >
+    <Flex flexDirection="column" minH="100vh">
       <Navbar />
-      <Flex flex="1" flexDirection="column" bg="white">
+      <Flex sx={{ flexDirection: 'column', flex: 1 }}>
         {children}
       </Flex>
       <Footer />
@@ -27,8 +17,6 @@ const PageWrapper = ({
 
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default PageWrapper;

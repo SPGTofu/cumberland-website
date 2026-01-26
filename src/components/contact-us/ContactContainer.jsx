@@ -1,41 +1,20 @@
-import { Box, Flex, Heading, Spacer } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import Phone from "./Phone";
 import Address from "./Address";
 import Email from "./Email";
+import { translate } from "../languages/translations";
 
 const ContactContainer = () => {
     return (
-        <Flex
-            flexDirection = 'column'
-            justifyContent = 'center'
-            alignItems = 'center'
-        >
-            <Heading 
-                size = 'lg'
-                pb = '6%'
-                pt = '8%'
-            >
-                Contact Us
-            </Heading>
-                    
-            <Box 
-                display = 'flex'
-                justifyContent = 'center'
-                alignItems = 'center'
-                ml = '15%'
-                mr = '15%'
-                mt = '0px'
-            >
+        <Flex sx= {{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Text textStyle='h1' sx={{ mb: '5%' }}>
+                {translate('contactPage.title')}
+            </Text>
+            <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Address />
-                <Spacer 
-                    w = '100px'
-                />
                 <Phone />
-                <Spacer 
-                    w = '100px'
-                />
                 <Email />
-            </Box>
+            </Flex>
         </Flex>
     );
 }
