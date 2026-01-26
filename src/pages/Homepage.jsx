@@ -1,11 +1,10 @@
 import PageWrapper from './PageWrapper';
 import { Box, Text } from '@chakra-ui/react';
-import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
+import GoogleMapSection from "../components/maps/GoogleMapSection";
 import ImageRotator from '../components/Image/ImageRotator';
 import { translate } from '../components/languages/translations';
 
 const Homepage = () => {
-  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
   const position = {lat: 37.13683574512634, lng: -93.26230885169069}
 
   const images = [
@@ -40,11 +39,7 @@ const Homepage = () => {
             </Text>
           </Box>
         <Box w="39%" h="400px">
-          <LoadScript googleMapsApiKey={apiKey} libraries={['places']}>
-            <GoogleMap mapContainerStyle={{ width: "90%", height: "100%" }} center={position} zoom={15}>
-              <MarkerF position={position}/>
-            </GoogleMap>
-          </LoadScript>
+          <GoogleMapSection center={position} />
         </Box>
         </Box>
       </Box>
