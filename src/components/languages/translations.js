@@ -18,7 +18,7 @@ export const translations = {
     home: {
       heroTitle: "Something about the Church",
       heroSubtitle:
-        "I still dont know what to fill this space with if we even need it at all?",
+        "I still dont know what to fill this space with if we even need it at all? I am just making this longer to see if it will look better as I am playing around with the homepage and man this guy that just passed me def farted because holy cow I smell poopoo. I am in the library and these books are so crusty and old I wonder if anybody ever even checks them out.",
       aboutServicesTitle: "About Our Services",
       aboutServicesBody:
         "John Park actually has some really nice sermons when you take into consideration that he is a fish that eats blankets when carrots get too expires to use for hunting purposes.",

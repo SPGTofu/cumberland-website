@@ -9,6 +9,7 @@ export default function FadeHero({ images }) {
     <Swiper
       modules={[Autoplay, EffectFade]}
       effect="fade"
+      style={{ height: "100%" }}
       fadeEffect={{ crossFade: true }}
       autoplay={{ delay: 8000, disableOnInteraction: false }}
       speed={1200}
