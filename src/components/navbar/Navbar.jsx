@@ -5,6 +5,7 @@ import { getLanguage, setLanguage } from '../languages/translations';
 import { languagesEnum } from '../languages/context';
 import { useNavigate } from 'react-router-dom';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import churchLogo from '../../assets/church_logo_extended.png';
 
 const Navbar = () => {
   const lang = getLanguage();
@@ -22,12 +23,12 @@ const Navbar = () => {
 
   return (  
     <Flex sx={{ bg: 'white', justifyContent: 'space-between', borderBottomWidth: '1px', boxShadow: 'md' }}>
-      <Flex sx={{ m: '1rem', justifyContent: 'center', alignItems: 'center' }}>
+      <Flex sx={{ m: '1rem', justifyContent: 'flex-start', alignItems: 'center' }}>
         <Image
-          src="/church-logo.png"  // file in public/ should be referenced from root
+          src={churchLogo}  // file in public/ should be referenced from root
           alt="logo"
           sx={{ 
-            w: 'clamp(4rem, 10vw, 20rem)'
+            w: '46%',
           }}
           _hover={{ opacity: 0.5, cursor: 'pointer' }}
           onClick={() => {navigate('/')}}

@@ -38,6 +38,7 @@ const NavItem = ({ name, menuItems, navigation }) => {
             {menuItems.map((item, index) => (
               <Text
                 textStyle="h3"
+                fontWeight='500'
                 key={index}
                 sx={{
                   display: "flex",
@@ -77,6 +78,7 @@ const NavItem = ({ name, menuItems, navigation }) => {
             <Text
               key={index}
               textStyle="h3"
+              fontWeight='500'
               sx={{
                 px: 'clamp(0.5rem, 1vw, 2rem)',
                 py: 'clamp(0.25rem, 0.5vw, 1rem)',

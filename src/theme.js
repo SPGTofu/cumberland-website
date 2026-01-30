@@ -103,7 +103,7 @@ const theme = extendTheme({
         lineHeight: 'short',
       },
       body: {
-        fontSize: 'clamp(0.75rem, 1.25vw, 1rem)',
+        fontSize: 'clamp(0.4rem, 1.25vw, 1rem)',
         lineHeight: 'base',
       },
       caption: {

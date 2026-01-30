@@ -5,6 +5,8 @@ import ImageRotator from '../components/Image/ImageRotator';
 import { translate } from '../components/languages/translations';
 
 const Homepage = () => {
+  document.title = translate('nav.home')
+
   const position = {lat: 37.13683574512634, lng: -93.26230885169069}
 
   const images = [

@@ -1,9 +1,9 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { translate } from "../languages/translations";
 import { ContactDisplay } from "./ContactDisplay";
-import location from "../../assets/location.png";
-import phone from "../../assets/phone.png";
-import email from "../../assets/email.png";
+import location from "../../assets/location_icon.png";
+import phone from "../../assets/phone_icon.png";
+import email from "../../assets/email_icon.png";
 
 const ContactContainer = () => {
   const addressText = (

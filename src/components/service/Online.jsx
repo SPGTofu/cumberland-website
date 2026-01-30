@@ -106,7 +106,7 @@ const Online = () => {
                   src = {youtubeLogo}
                   alt = 'YouTube'
                   sx={{
-                    w: 'clamp(0.5rem, 4vw, 5.125rem)',
+                    w: 'clamp(0.6rem, 5vw, 5.5rem)',
                     h: 'clamp(0.5rem, 4vw, 5.125rem)'
                   }}
                 />

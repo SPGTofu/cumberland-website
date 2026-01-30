@@ -3,6 +3,7 @@ import { translate } from '../components/languages/translations';
 import { Box, Text } from '@chakra-ui/react';
 
 const AboutUs = () => {
+  document.title = translate('nav.aboutItems.whoWeAre')
   return (  
     <PageWrapper>
       <Box w="100%" h="500px" background="#d3c0b0" p="20px" mb="50px">

@@ -1,8 +1,11 @@
 import PageWrapper from "./PageWrapper";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ProfileBio from "../components/Image/ProfileBio";
+import { translate } from "../components/languages/translations";
 
 export default function TeamPage() {
+  document.title = translate('nav.aboutItems.ourTeam')
+
   return (
     <PageWrapper>
       <Box maxW="1100px" mx="auto" px={6} py={10}>
