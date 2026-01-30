@@ -6,7 +6,7 @@ import { useJsApiLoader } from "@react-google-maps/api";
 import Homepage from "./pages/Homepage";
 import AboutUs from "./pages/AboutUs";
 import TeamPage from "./pages/TeamPage";
-import VisionPage from "./pages/VisionPage";
+import BeliefsPage from "./pages/BeliefsPage";
 import ServicePage from "./pages/ServicePage";
 import ContactPage from "./pages/ContactPage";
 import theme from "./theme";
@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/our-team" element={<TeamPage />} />
-          <Route path="/vision" element={<VisionPage />} />
+          <Route path="/beliefs" element={<BeliefsPage />} />
           <Route path="/attend-service" element={<ServicePage />} />
           <Route path="/contact-us" element={<ContactPage />} />
         </Routes>

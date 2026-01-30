@@ -11,7 +11,7 @@ export const translations = {
       aboutItems: {
         whoWeAre: "Who We Are",
         ourTeam: "Our Team",
-        ourBeliefs: "Our Vision",
+        ourBeliefs: "Our Beliefs",
       },
     },
 
@@ -49,7 +49,20 @@ export const translations = {
       ],
     },
 
-    ourBeliefs: {},
+    ourBeliefs: {
+      title: "Our Beliefs",
+      statements: {
+        "The Bible": "We believe the Holy Bible is the inspired Word of God, the only infallible rule for faith and practice.",
+        "The Trinity": "We believe there is one God, eternally existent in three persons: Father, Son, and Holy Spirit.",
+        "Jesus Christ": "We believe Jesus Christ is the Son of God. We affirm his virgin birth, sinless life, miracles, sacrificial death, bodily resurrection, ascension to the right hand of the Father, and his personal return in power and glory.",
+        "Salvation": "We believe everyone has sinned, lost communion with God, and is under condemnation. Salvation is the free gift of God to everyone who believes in the Lord Jesus Christ, who paid for our sins on the cross. Those who believe are eternally secure in Him.",
+        "The Church": "We believe the church is the body of Christ and consists of everyone who has become children of God by faith. Jesus Christ is the head of the Church. Individual congregations are to be governed by elders, who serve as under shepherds.",
+        "The Sacraments": "We believe there are two sacraments ordained by Christ: Baptism and the Lord's Supper.",
+        "Marriage and The Family": "We believe marriage is a sacred institution ordained for the benefit of the human race. It is to be between one man and one woman, and should not be dissolved for any cause not justified by the teaching of the Word of God.",
+        "The Lord's Day": "We believe the first day of the week is the Lord’s Day, the Christian Sabbath, which is to be kept holy unto the Lord. It is a day of rest and worship of the triune God, and commemorates the resurrection of Christ.",
+        "Things to Come": "We believe at the Last Day, Jesus Christ will come to judge the living and the dead. There will be a resurrection of the just and the unjust. The righteous will enter into eternal blessedness and the wicked into eternal condemnation."
+      }
+    },
     joinUs: {
       onlineTitle: 'Join Us Online',
       inPersonTitle: 'Join Us In Person',
@@ -75,7 +88,7 @@ export const translations = {
       aboutItems: {
         whoWeAre: "교회 소개",
         ourTeam: "팀 소개",
-        ourBeliefs: "교회 믿음",
+        ourBeliefs: "우리의 신념",
       },
     },
 
@@ -113,7 +126,20 @@ export const translations = {
       ],
     },
 
-    ourBeliefs: {},
+    ourBeliefs: {
+      title: "우리의 신념",
+      statements: {
+        "성경": "우리는 성경이 하나님의 영감으로 기록된 말씀이며, 믿음과 행위에 대한 유일하고 오류 없는 규범이라고 믿습니다.",
+        "삼위일체": "우리는 한 분 하나님이 영원히 세 위격, 즉 성부, 성자, 성령으로 존재하신다고 믿습니다.",
+        "예수 그리스도": "우리는 예수 그리스도가 하나님의 아들이심을 믿습니다. 우리는 그의 동정녀 탄생, 죄 없는 삶, 기적, 희생적인 죽음, 육체적 부활, 성부 우편으로의 승천, 그리고 권능과 영광 가운데 다시 오심을 믿습니다.",
+        "구원": "우리는 모든 사람이 죄를 지어 하나님과의 교제를 잃고 정죄 아래 있다고 믿습니다. 구원은 주 예수 그리스도를 믿는 모든 사람에게 주시는 하나님의 값없는 선물이며, 예수님은 십자가에서 우리의 죄를 대속하셨습니다. 믿는 자들은 그 안에서 영원히 안전합니다.",
+        "교회": "우리는 교회가 그리스도의 몸이며, 믿음으로 하나님의 자녀가 된 모든 사람들로 구성된다고 믿습니다. 예수 그리스도는 교회의 머리이십니다. 개별 교회는 목자로서 섬기는 장로들에 의해 다스려져야 합니다.",
+        "성례": "우리는 그리스도께서 제정하신 두 가지 성례, 즉 세례와 성찬이 있다고 믿습니다.",
+        "결혼과 가정": "우리는 결혼이 인류의 유익을 위해 제정된 신성한 제도라고 믿습니다. 결혼은 한 남자와 한 여자 사이에서 이루어져야 하며, 하나님의 말씀의 가르침에 의해 정당화되지 않는 어떤 이유로도 해소되어서는 안 됩니다.",
+        "주일": "우리는 한 주의 첫째 날이 주님의 날, 즉 기독교 안식일이며, 주님께 거룩하게 지켜야 할 날이라고 믿습니다. 주일은 삼위일체 하나님을 예배하고 그리스도의 부활을 기념하는 안식과 예배의 날입니다.",
+        "종말": "우리는 마지막 날에 예수 그리스도께서 산 자와 죽은 자를 심판하러 오실 것이라고 믿습니다. 의인과 악인의 부활이 있을 것입니다. 의인은 영원한 복락에 들어가고 악인은 영원한 정죄를 받을 것입니다."
+      }
+    },
     joinUs: {
       onlineTitle: '온라인으로 참여하세요',
       inPersonTitle: '직접 참여하세요',
