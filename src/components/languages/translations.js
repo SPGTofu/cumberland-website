@@ -16,9 +16,7 @@ export const translations = {
     },
 
     home: {
-      heroTitle: "Something about the Church",
-      heroSubtitle:
-        "I still dont know what to fill this space with if we even need it at all?",
+      heroTitle: "Welcome!",
       aboutServicesTitle: "About Our Services",
       aboutServicesBody:
         "John Park actually has some really nice sermons when you take into consideration that he is a fish that eats blankets when carrots get too expires to use for hunting purposes.",
@@ -93,7 +91,7 @@ export const translations = {
     },
 
     home: {
-      heroTitle: "교회에 관한 이야기",
+      heroTitle: "마음대로 즐기는 특권",
       heroSubtitle:
         "아직 이 공간에 어떤 내용을 담아야 할지, 혹은 이 공간이 실제로 필요한지에 대해서도 명확하지 않습니다.",
       aboutServicesTitle: "서비스 소개",

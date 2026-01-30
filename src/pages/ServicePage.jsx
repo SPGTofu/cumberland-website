@@ -3,8 +3,9 @@ import InPerson from "../components/service/InPerson";
 import PageWrapper from "./PageWrapper";
 
 const Service = () => {
+  document.title = "Join Us"
   return (
-    <PageWrapper height='140vh'>
+    <PageWrapper>
         <Online />
         <InPerson />
     </PageWrapper>

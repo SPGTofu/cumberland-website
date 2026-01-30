@@ -52,6 +52,7 @@ const theme = extendTheme({
         800: '#822727',
         900: '#63171B',
       },
+      accent: '#FE3039'
     },
     fontSizes: {
       xs: '0.75rem',
@@ -66,42 +67,47 @@ const theme = extendTheme({
       '6xl': '3.75rem',
     },
     textStyles: {
-      h1: {
-        fontSize: '4xl',
+      h0: {
+        fontSize: 'clamp(1.8rem, 5vw, 5rem)',
         fontWeight: 'bold',
-        lineHeight: 'shorter',
+        lineHeiht: 'shorter',
+      },
+      h1: {
+        fontSize: 'clamp(1.6rem, 4vw, 2.25rem)',
+        fontWeight: 'bold',
+        lineHeiht: 'shorter',
       },
       h2: {
-        fontSize: '3xl',
+        fontSize: 'clamp(1.25rem, 3vw, 4.875rem)',
         fontWeight: 'bold',
         lineHeight: 'shorter',
       },
       h3: {
-        fontSize: '2xl',
+        fontSize: 'clamp(0.7rem, 2.5vw, 1.5rem)',
         fontWeight: 'semibold',
         lineHeight: 'short',
       },
       h4: {
-        fontSize: 'xl',
+        fontSize: 'clamp(0.5rem, 2vw, 1.25rem)',
         fontWeight: 'semibold',
         lineHeight: 'short',
       },
       h5: {
-        fontSize: 'lg',
+        fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)',
         fontWeight: 'medium',
         lineHeight: 'short',
       },
       h6: {
-        fontSize: 'md',
+        fontSize: 'clamp(0.875rem, 1.25vw, 1rem)',
         fontWeight: 'medium',
         lineHeight: 'short',
       },
       body: {
-        fontSize: 'md',
+        fontSize: 'clamp(0.75rem, 1.25vw, 1rem)',
         lineHeight: 'base',
       },
       caption: {
-        fontSize: 'sm',
+        fontSize: 'clamp(0.75rem, 1vw, 0.875rem)',
         lineHeight: 'short',
       },
     },

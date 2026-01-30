@@ -7,7 +7,7 @@ const PageWrapper = ({ children, height, width }) => {
   return (
     <Flex
       flexDirection="column"
-      minH="100vh"
+      flex='1'
       h={height ?? '100%'}
       w={width ?? '100%'}
     >

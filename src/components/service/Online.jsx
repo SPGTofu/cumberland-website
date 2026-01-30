@@ -16,16 +16,44 @@ const Online = () => {
   }
 
   return (  
-    <Flex sx={{ flexDirection: 'row', flex: '1' }}>
-      <Flex sx={{ bg: 'gray.100', justifyContent: 'center', alignItems: 'center', width: '45%' }}>
+    <Flex
+      sx={{
+        flexDirection: { base: 'column', md: 'row' },
+        minH: '20rem',
+        flex: '1'
+      }}
+    >
+      <Flex
+        sx={{
+          bg: 'gray.100',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minW: '45%',
+          minH: '24rem'
+        }}
+      >
         Holder for Image
       </Flex>
-      <Flex sx={{ bg: 'white', justifyContent: 'center', alignItems: 'center', width: '55%', paddingX: '15rem' }}>
-        <Flex sx={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Text textStyle='h2' sx={{ mb: '1rem', color: 'gray.800' }}>
+      <Flex
+        sx={{
+          bg: 'white',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minW: '55%',
+          padding: 'clamp(1rem, 8vw, 12rem)',
+        }}
+      >
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          <Text textStyle='h2' sx={{ mb: 'clamp(0.5rem, 2vw, 1.5rem)', color: 'gray.800' }}>
             {translate('joinUs.onlineTitle')}
           </Text>
-          <Text textStyle='h4' sx={{ marginBottom: '3rem', fontWeight: '600', color: 'gray.600' }}>
+          <Text textStyle='h4' sx={{ marginBottom: 'clamp(1rem, 5vw, 5rem)', color: 'gray.600' }}>
             {translate('joinUs.onlineSubtitle')}
           </Text>
           <Flex sx={{ flexDirection: 'row' }}>
@@ -42,16 +70,26 @@ const Online = () => {
                 onClick = {handleFacebookClick}
               >
                 <Image
-                  sx={{ width: '3.125rem', height: '3.125rem' }}
+                  sx={{
+                    w: 'clamp(0.5rem, 4vw, 5.125rem)',
+                    h: 'clamp(0.5rem, 4vw, 5.125rem)'
+                  }}
                   src = {facebookLogo}
                   alt = 'facebook'
                 />
               </Box>
-              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringFacebook ? 0.5 : 1) }}>
+              <Text
+                sx={{
+                  textStyle: 'body',
+                  fontWeight: 500,
+                  color: 'gray.700',
+                  opacity: (isHoveringFacebook ? 0.5 : 1)
+                }}
+              >
                 {translate('joinUs.facebook')}
               </Text>
             </Flex>
-            <Spacer sx={{ width: '5rem' }}/>
+            <Spacer sx={{ w: 'clamp(1rem, 6vw, 8rem)' }}/>
             <Flex sx={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <Box
                 sx={{
@@ -67,10 +105,13 @@ const Online = () => {
                 <Image
                   src = {youtubeLogo}
                   alt = 'YouTube'
-                  sx={{ width: '3.75rem', height: '3.125rem' }}
+                  sx={{
+                    w: 'clamp(0.5rem, 4vw, 5.125rem)',
+                    h: 'clamp(0.5rem, 4vw, 5.125rem)'
+                  }}
                 />
               </Box>
-              <Text sx={{ fontSize: 'md', fontWeight: '500', color: 'gray.700', opacity: (isHoveringYoutube ? 0.5 : 1 )}}>
+              <Text sx={{ textStyle: 'body', fontWeight: 500, color: 'gray.700', opacity: (isHoveringYoutube ? 0.5 : 1 )}}>
                 {translate('joinUs.youtube')}
               </Text>
             </Flex>

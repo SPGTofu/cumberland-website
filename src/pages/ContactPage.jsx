@@ -4,7 +4,7 @@ import PageWrapper from './PageWrapper';
 const ContactPage = () => {
 
   return (
-    <PageWrapper height='130vh'>
+    <PageWrapper>
       <ContactContainer />
     </PageWrapper>
   );
