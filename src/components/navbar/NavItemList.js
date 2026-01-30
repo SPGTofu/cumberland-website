@@ -12,7 +12,7 @@ const navigationItems = [
       translate('nav.aboutItems.ourTeam'),
       translate('nav.aboutItems.ourBeliefs'),
     ],
-    navigation: ['/about-us', '/our-team', '/vision'],
+    navigation: ['/about-us', '/our-team', '/beliefs'],
   },
   {
     name: translate('nav.joinUs'),

@@ -3,7 +3,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 export default function ProfileBio({ name, position, photoSrc, children, reverse = false }) {
   return (
     <Flex
-  		direction={{ base: "column", md: reverse ? "row-reverse" : "row" }}
+  	  direction={{ base: "column", md: reverse ? "row-reverse" : "row" }}
   		align="center"
   		gap={8}
   		py={10}
