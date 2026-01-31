@@ -50,7 +50,13 @@ const AboutUs = () => {
           />
         </Box>
 
+
+
         <Box w={{ base: "100%", md: "52%" }} bg="#f7f5f2" borderRadius="2xl" p={{ base: "1.5rem", md: "2.5rem" }}>
+          <BubbleText
+            text={translate('whoWeAre.whatCumberland')}
+            textAlign='left'
+          />
           <Text fontSize={{ base: "1.8rem", md: "2.2rem" }} fontWeight="700" color="black" textAlign="left">
             {translate('whoWeAre.whatTitle')}
           </Text>
