@@ -53,7 +53,8 @@ const theme = extendTheme({
         900: '#63171B',
       },
       accent1: '#FE3039',
-      accent2: '#f7f5f2'
+      accent2: '#f7f5f2',
+      accent3: '#aedeea'
     },
     fontSizes: {
       xs: '0.75rem',
@@ -104,7 +105,7 @@ const theme = extendTheme({
         lineHeight: 'short',
       },
       body: {
-        fontSize: 'clamp(0.4rem, 1.25vw, 1rem)',
+        fontSize: 'clamp(0.7rem, 1.25vw, 1rem)',
         lineHeight: 'base',
       },
       caption: {
@@ -112,6 +113,9 @@ const theme = extendTheme({
         lineHeight: 'short',
       },
     },
+    borderColors: {
+      accent3: '#aedeea'
+    }
 });
 
 export default theme;

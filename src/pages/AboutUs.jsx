@@ -11,6 +11,12 @@ const AboutUs = () => {
     "/group.JPEG",
   ];
 
+  const cardParts = [
+    1,
+    2,
+    3
+  ]
+
   return (  
     <PageWrapper>
       <Box w="100%" position="relative" h={{ base: "280px", md: "380px", lg: "520px" }} overflow="hidden">
@@ -36,19 +42,18 @@ const AboutUs = () => {
       </Box>
 
       <Box display="flex" alignItems="center" w="100%" my="3rem" mx="auto">
-        <Divider flex="1" borderColor="#aedeea" />
+        <Divider flex="1" borderColor="accent3" />
       </Box>
 
       <Flex
         mb="5rem"
         gap="2.5rem"
         flexWrap={{ base: "wrap", md: "nowrap" }}
-        alignItems="stretch"
-        mx={{ base: '0', md: '0rem' }}
         w={{ base: '100%' }}
         justify='center'
+        px={{ base: 0, md: '1rem', lg: '12rem' }}
       > 
-        <Box w={{ base: "100%", md: "48%" }} borderRadius={{ base: 0, md: "xl"}} overflow="hidden" boxshadow={{ base: '', md: boxShadow }}>
+        <Box w={{ base: "100%", md: "50%" }} boxShadow={{ base: '', md: boxShadow }}>
           <Image
             src={images[0]}
             alt=""
@@ -56,16 +61,19 @@ const AboutUs = () => {
             h={{ base: "340px", md: "100%" }}
             objectFit="cover"
             objectPosition="center"
+            borderRadius={{ base: 0, md: "xl"}}
+            overflow="hidden"
           />
         </Box>
 
         <BubbleText
           textAlign='left'
-          w={{ base: "100%", md: "52%" }}
+          w={{ base: "100%", md: "50%" }}
           bg='accent2'
           px={{ base: "2rem", md: "3.5rem", lg: '5rem' }}
           py={{ base: "1.5rem", md: "2.5rem", lg: '3.5rem' }}
-          boxshadow={{ base: '', md: boxShadow }}
+          boxShadow={{ base: '', md: boxShadow }}
+          mx={{ base: '1rem', md: 0 }}
         >
           <Text fontSize={{ base: "1.8rem", md: "2.2rem" }} fontWeight="700" color="black" textAlign="left">
             {translate('whoWeAre.whatTitle')}
@@ -74,7 +82,7 @@ const AboutUs = () => {
             {translate('whoWeAre.whatCumberland')}
           </Text>
 
-          <Box h="1px" bg="#aedeea" w="100%" my="1.5rem" opacity="0.9" />
+          <Box h="1px" bg="accent3" w="100%" my="1.5rem" opacity="0.9" />
 
           <Text fontSize="1.05rem" color="gray.600" lineHeight="1.8" textAlign="left">
             {translate('whoWeAre.whyCumberland')}
@@ -83,42 +91,40 @@ const AboutUs = () => {
       </Flex>
 
       <Box display="flex" alignItems="center" w="90%" my="3rem" mx="auto">
-        <Divider flex="1" borderColor="#aedeea" />
+        <Divider flex="1" borderColor="accent3" />
         <Text mx="1.5rem" fontSize="1.05rem" fontWeight="600" letterSpacing="0.18em" color="#6b4f3a" whiteSpace="nowrap">
           CUMBERLAND CHURCH
         </Text>
-        <Divider flex="1" borderColor="#aedeea" />
+        <Divider flex="1" borderColor="accent3" />
       </Box>
 
-      <Box maxW="1200px" mx="auto" px="2rem" mb="5rem" display="flex" gap="2rem" flexWrap={{ base: "wrap", md: "nowrap" }}>
-        
-        <Box flex="1" minW={{ base: "100%", md: "0" }} bg="#ffffff" borderRadius="2xl" p="2.2rem" boxShadow="sm" border="1px solid rgba(174,222,234,0.35)">
-          <Text fontSize="1.5rem" fontWeight="700" color="black" textAlign="left">
-            {translate('whoWeAre.whatTitle')}
-          </Text>
-          <Text fontSize="1.05rem" color="gray.700" lineHeight="1.75" textAlign="left" mt="0.8rem">
-            {translate('whoWeAre.whatCumberland')}
-          </Text>
-        </Box>
+      <Flex
+        mb="5rem"
+        gap="2.5rem"
+        flexWrap={{ base: "wrap", md: "nowrap" }}
+        justify='center'
+        px={{ base: 0, md: '1rem', lg: '12rem' }}
+      >
+        {cardParts.map((item, idx) => (          
+          <BubbleText
+            mx={{ base: '3rem', md: 0 }}
+            px={{ base: '3rem' }}
+            py={{ base: '2rem' }}
+            w={{ base: '100%', md: '33%' }}
+            key={idx}
+            overflowWrap='break-word'
+            wordBreak='break-word'
 
-        <Box flex="1" minW={{ base: "100%", md: "0" }} bg="#ffffff" borderRadius="2xl" p="2.2rem" boxShadow="sm" border="1px solid rgba(174,222,234,0.35)">
-          <Text fontSize="1.5rem" fontWeight="700" color="black" textAlign="left">
-            {translate('whoWeAre.whyTitle')}
-          </Text>
-          <Text fontSize="1.05rem" color="gray.700" lineHeight="1.75" textAlign="left" mt="0.8rem">
-            {translate('whoWeAre.whyCumberland')}
-          </Text>
-        </Box>
-
-        <Box flex="1" minW={{ base: "100%", md: "0" }} bg="#ffffff" borderRadius="2xl" p="2.2rem" boxShadow="sm" border="1px solid rgba(174,222,234,0.35)">
-          <Text fontSize="1.5rem" fontWeight="700" color="black" textAlign="left">
-            {translate('whoWeAre.giveTitle')}
-          </Text>
-          <Text fontSize="1.05rem" color="gray.700" lineHeight="1.75" textAlign="left" mt="0.8rem">
-            {translate('whoWeAre.giveCumberland')}
-          </Text>
-        </Box>
-      </Box>
+          >
+            <Text textStyle='h3' textAlign="left" mb='1rem'>
+              {translate('whoWeAre.whatTitle')}
+            </Text>
+            <Text textStyle='body' textAlign="left">
+              {translate('whoWeAre.whatCumberland')}
+            </Text>
+          </BubbleText>
+        ))}
+      </Flex>
     </PageWrapper>
   );
 }

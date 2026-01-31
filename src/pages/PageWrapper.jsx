@@ -1,7 +1,5 @@
 import { Fade, Flex, useDisclosure } from "@chakra-ui/react"
-import Navbar from "../components/navbar/Navbar"
 import PropTypes from "prop-types";
-import Footer from "../components/footer";
 import { useEffect } from "react";
 
 const PageWrapper = ({ children }) => {
