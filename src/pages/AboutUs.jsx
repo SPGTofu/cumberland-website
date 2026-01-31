@@ -1,6 +1,7 @@
 import PageWrapper from './PageWrapper';
 import { translate } from '../components/languages/translations';
-import { Box, Text, Divider, Image } from '@chakra-ui/react';
+import { Box, Text, Divider, Image, Flex } from '@chakra-ui/react';
+import { BubbleText } from '../components/BubbleTextOverlay';
 
 const AboutUs = () => {
   document.title = translate('nav.aboutItems.whoWeAre')
@@ -13,35 +14,28 @@ const AboutUs = () => {
   return (  
     <PageWrapper>
       <Box w="100%" position="relative" h={{ base: "280px", md: "380px", lg: "520px" }} overflow="hidden">
-        <Image
-          src={images[1]}
-          alt=""
-          w="100%"
-          h="100%"
-          objectFit="cover"
-          objectPosition="center"
-          filter="saturate(0.95)"
-          loading='eager'
-        />
-
+        <Image src={images[1]} w="100%" h="100%" objectFit="cover" objectPosition="center" filter="saturate(0.95)" />
         <Box position="absolute" inset="0" bg="rgba(255,255,255,0.35)" />
         <Box position="absolute" inset="0" bgGradient="linear(to-b, rgba(255,255,255,0.05), rgba(247,245,242,0.85))" />
 
-        <Box position="absolute" left="0" right="0" bottom="0" pb={{ base: "2rem", md: "3rem" }}>
-          <Box maxW="1100px" mx="auto" px="2rem">
-            <Text fontSize={{ base: "2.2rem", md: "3rem" }} fontWeight="800" color="black" textAlign="left" lineHeight="1.1">
+        <Flex fill='1' position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
+          <Flex direction='column' alignItems='center'>
+            <Text textStyle="h0" color="white" textAlign="left" lineHeight="1.1" textOverflow="ellipsis">
               {translate('nav.aboutItems.whoWeAre')}
             </Text>
-            <Text fontSize={{ base: "1.1rem", md: "1.5rem" }} color="gray.700" textAlign="left" maxW="780px" mt="0.8rem">
-              {translate('whoWeAre.whoCumberland')}
-            </Text>
-          </Box>
-        </Box>
+          </Flex>
+        </Flex>
       </Box>
+      
+      <Flex px='clamp(1%, 20%, 50%)' justify='center' my='clamp(1rem, 3rem, 5rem)'>
+        <BubbleText
+          text={translate('whoWeAre.whoCumberland')}
+          textStyle='h4'
+          textAlign='left'
+          width={{ base : '100%', md: '100%' }}
+        />
+      </Flex>
 
-      <Box display="flex" alignItems="center" w="100%" my="3rem" mx="auto">
-        <Divider flex="1" borderColor="#aedeea" />
-      </Box>
 
       <Box maxW="1200px" mx="auto" px="2rem" mb="5rem" display="flex" gap="2.5rem" flexWrap={{ base: "wrap", md: "nowrap" }} alignItems="stretch">
         
