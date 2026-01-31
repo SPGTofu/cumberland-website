@@ -16,7 +16,7 @@ export const translations = {
     },
 
     home: {
-      heroTitle: "Welcome!",
+      heroTitle: "Welcome",
       aboutServicesTitle: "About Our Services",
       aboutServicesBody:
         "John Park actually has some really nice sermons when you take into consideration that he is a fish that eats blankets when carrots get too expires to use for hunting purposes.",
@@ -91,7 +91,7 @@ export const translations = {
     },
 
     home: {
-      heroTitle: "마음대로 즐기는 특권",
+      heroTitle: "환영합니다",
       aboutServicesTitle: "서비스 소개",
       aboutServicesBody:
         "존 파크는 실제로 당신이 종교적 이미지를 떠올릴 때 고려해보면 매우 멋진 설교를 합니다. 그는 당신이 사냥을 위해 사용할 수 없게 된 당근을 먹는 물고기라는 점을 고려해보면 말이죠.",

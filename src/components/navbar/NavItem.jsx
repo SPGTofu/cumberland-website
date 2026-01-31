@@ -1,16 +1,23 @@
-import { Popover, PopoverContent, PopoverTrigger, Text, Box, useBreakpointValue } from "@chakra-ui/react";
+import { Popover, PopoverContent, PopoverTrigger, Text, Box, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import PropTypes, { any, string } from "prop-types";
 
 const NavItem = ({ name, menuItems, navigation }) => {
   const navigate = useNavigate();
   const isDesktop = useBreakpointValue({ base: false, md: true });
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   if (menuItems) {
     // Desktop: hover dropdown
     if (isDesktop) {
       return (
-        <Popover placement="bottom-start" trigger="hover">
+        <Popover
+          placement="bottom-start"
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onClose}
+          trigger="hover"
+        >
           <PopoverTrigger>
             <Text
               textStyle="h3"

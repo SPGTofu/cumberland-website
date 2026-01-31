@@ -10,6 +10,7 @@ import BeliefsPage from "./pages/BeliefsPage";
 import ServicePage from "./pages/ServicePage";
 import ContactPage from "./pages/ContactPage";
 import theme from "./theme";
+import { Layout } from "./components/Layout";
 
 function App() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
@@ -22,9 +23,8 @@ function App() {
 
   if (!isLoaded) {
     return (
-      <ChakraProvider theme={theme}>
-        <div>Loading map...</div>
-      </ChakraProvider>
+      <>
+      </>
     );
   }
 
@@ -32,12 +32,14 @@ function App() {
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/our-team" element={<TeamPage />} />
-          <Route path="/beliefs" element={<BeliefsPage />} />
-          <Route path="/attend-service" element={<ServicePage />} />
-          <Route path="/contact-us" element={<ContactPage />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/our-team" element={<TeamPage />} />
+            <Route path="/beliefs" element={<BeliefsPage />} />
+            <Route path="/attend-service" element={<ServicePage />} />
+            <Route path="/contact-us" element={<ContactPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

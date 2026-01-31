@@ -22,7 +22,7 @@ const Navbar = () => {
   ));
 
   return (  
-    <Flex sx={{ bg: 'white', justifyContent: 'space-between', borderBottomWidth: '1px', boxShadow: 'md' }}>
+    <Flex sx={{ bg: 'white', justifyContent: 'space-between', borderBottomWidth: '1px', boxShadow: 'md', }} animationStyle={{ _open: "slide-fade-in", _closed: "slide-fade-out" }}>
       <Flex sx={{ m: '1rem', justifyContent: 'flex-start', alignItems: 'center' }}>
         <Image
           src={churchLogo}  // file in public/ should be referenced from root

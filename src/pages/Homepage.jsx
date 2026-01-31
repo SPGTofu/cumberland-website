@@ -1,5 +1,5 @@
 import PageWrapper from './PageWrapper';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, Divider } from '@chakra-ui/react';
 import GoogleMapSection from "../components/maps/GoogleMapSection";
 import ImageRotator from '../components/Image/ImageRotator';
 import { translate } from '../components/languages/translations';
@@ -18,15 +18,16 @@ const Homepage = () => {
   return (
     <PageWrapper>
       <Box position="relative">
-        <Box w="100%" h="100%">
+        <Box w="100%" h={{ base: "260px", md: "360px", lg: "45rem" }} overflow="hidden">
           <ImageRotator images={images} />
         </Box>
+        <Box display="flex" alignItems="center" w="100%" mx="auto">
+          <Divider flex="1" borderColor="#aedeea" />
+        </Box>
         <Box
-          bg='#FBEFEF'
           w="100%"
           py={{ base: '3rem', md: '5rem' }}
           px="20px"
-          mb={{ base: '2rem', md: '50px' }}
         >
           <Text textStyle='h0' textAlign="center">
             {translate('home.heroTitle')}
@@ -36,6 +37,13 @@ const Homepage = () => {
           </Text>        */}
         </Box>
         
+        <Box display="flex" alignItems="center" w="90%" my="3rem" mx="auto">
+          <Divider flex="1" borderColor="#aedeea" />
+            <Text mx="1.5rem" fontSize="1.25rem" fontWeight="500" letterSpacing="0.15em" whiteSpace="nowrap">
+              CUMBERLAND CHURCH
+            </Text>
+          <Divider flex="1" borderColor="#aedeea" />
+        </Box>
 
         <Box
           display="flex"

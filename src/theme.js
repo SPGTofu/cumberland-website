@@ -52,7 +52,8 @@ const theme = extendTheme({
         800: '#822727',
         900: '#63171B',
       },
-      accent: '#FE3039'
+      accent1: '#FE3039',
+      accent2: '#f7f5f2'
     },
     fontSizes: {
       xs: '0.75rem',
