@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react"
 
 export const BubbleText = ({
-  text,
+  children,
   textStyle,
   color,
   textAlign,
@@ -19,10 +19,11 @@ export const BubbleText = ({
       borderColor='black'
       px={rest.px ?? 'clamp(3px, 3vw, 5rem)'}
       py={rest.py ?? 'clamp(3px, 2vw, 5rem)'}
-      m='3rem'
       boxShadow='22px 22px 20px 10px rgb(0,0,0,0.1)'
     >
-      {text}
+      {children}
     </Text>
   )
 }
+
+export const boxShadow = '22px 22px 20px 10px rgb(0,0,0,0.1)'
