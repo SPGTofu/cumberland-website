@@ -3,6 +3,7 @@ import { Box, Text, Divider } from '@chakra-ui/react';
 import GoogleMapSection from "../components/maps/GoogleMapSection";
 import ImageRotator from '../components/Image/ImageRotator';
 import { translate } from '../components/languages/translations';
+import { boxShadow, BubbleText } from '../components/BubbleTextOverlay';
 
 const Homepage = () => {
   document.title = translate('nav.home')
@@ -37,7 +38,7 @@ const Homepage = () => {
           </Text>        */}
         </Box>
         
-        <Box display="flex" alignItems="center" w="90%" my="3rem" mx="auto">
+        <Box display="flex" alignItems="center" w="90%" mb="3rem" mx="auto">
           <Divider flex="1" borderColor="#aedeea" />
             <Text mx="1.5rem" fontSize="1.25rem" fontWeight="500" letterSpacing="0.15em" whiteSpace="nowrap">
               CUMBERLAND CHURCH
@@ -54,24 +55,25 @@ const Homepage = () => {
           mb={{ base: '2rem', md: '40px' }}
           gap={{ base: '2rem', md: '0' }}
         >
-          <Box
+          <BubbleText
             w={{ base: '100%', md: '59%' }}
             h={{ base: '300px', md: '400px' }}
-            background="#FBEFEF"
+            bg='accent2'
             p="20px"
           >
-            <Text textStyle="h1" textAlign="left">
+            <Text textStyle="h2" textAlign="left">
               {translate('home.aboutServicesTitle')}
             </Text>
             <Text textStyle="h3" fontWeight='normal' color="black" textAlign="left">
               {translate('home.aboutServicesBody')}
             </Text>
-          </Box>
+          </BubbleText>
           <Box
             w={{ base: '100%', md: '39%' }}
             h={{ base: '300px', md: '400px' }}
             display='flex'
             justifyContent='center'
+            boxShadow={boxShadow}
           >
             <GoogleMapSection center={position} />
           </Box>

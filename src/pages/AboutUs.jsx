@@ -114,6 +114,7 @@ const AboutUs = () => {
             key={idx}
             overflowWrap='break-word'
             wordBreak='break-word'
+            bg='accent2'
 
           >
             <Text textStyle='h3' textAlign="left" mb='1rem'>

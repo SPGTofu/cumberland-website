@@ -43,7 +43,7 @@ const ContactContainer = () => {
         sx={{
           flexDirection: { base: 'column', md: 'row' },
           justifyContent: 'center',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           w: '100%',
           gap: 'clamp(2rem, 8vw, 16rem)'
         }}
