@@ -19,23 +19,16 @@ const AboutUs = () => {
         <Box position="absolute" inset="0" bgGradient="linear(to-b, rgba(255,255,255,0.05), rgba(247,245,242,0.85))" />
 
         <Flex fill='1' position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
-          <Flex direction='column' alignItems='center'>
-            <Text textStyle="h0" color="white" textAlign="left" lineHeight="1.1" textOverflow="ellipsis">
+          <Flex direction='column' alignItems='flex-start'>
+            <Text textStyle="h1" color="black" textAlign="left" lineHeight="1.1" textOverflow="ellipsis">
               {translate('nav.aboutItems.whoWeAre')}
+            </Text>
+            <Text textStyle='h3' fontWeight='500' color="gray.700" textAlign="left" maxW="780px" mt="0.8rem">
+              {translate('whoWeAre.whoCumberland')}
             </Text>
           </Flex>
         </Flex>
       </Box>
-      
-      <Flex px='clamp(1%, 20%, 50%)' justify='center' my='clamp(1rem, 3rem, 5rem)'>
-        <BubbleText
-          text={translate('whoWeAre.whoCumberland')}
-          textStyle='h4'
-          textAlign='left'
-          width={{ base : '100%', md: '100%' }}
-        />
-      </Flex>
-
 
       <Box maxW="1200px" mx="auto" px="2rem" mb="5rem" display="flex" gap="2.5rem" flexWrap={{ base: "wrap", md: "nowrap" }} alignItems="stretch">
         

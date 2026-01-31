@@ -69,12 +69,12 @@ const theme = extendTheme({
     },
     textStyles: {
       h0: {
-        fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+        fontSize: 'clamp(1.8rem, 5vw, 6rem)',
         fontWeight: 'bold',
         lineHeiht: 'shorter',
       },
       h1: {
-        fontSize: 'clamp(1.6rem, 4vw, 2.25rem)',
+        fontSize: 'clamp(1.6rem, 4vw, 5.25rem)',
         fontWeight: 'bold',
         lineHeiht: 'shorter',
       },
