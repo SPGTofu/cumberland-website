@@ -16,9 +16,7 @@ export const translations = {
     },
 
     home: {
-      heroTitle: "Something about the Church",
-      heroSubtitle:
-        "I still dont know what to fill this space with if we even need it at all? I am just making this longer to see if it will look better as I am playing around with the homepage and man this guy that just passed me def farted because holy cow I smell poopoo. I am in the library and these books are so crusty and old I wonder if anybody ever even checks them out.",
+      heroTitle: "Welcome",
       aboutServicesTitle: "About Our Services",
       aboutServicesBody:
         "John Park actually has some really nice sermons when you take into consideration that he is a fish that eats blankets when carrots get too expires to use for hunting purposes.",
@@ -33,6 +31,8 @@ export const translations = {
         "The name “Cumberland” reflects the region along the border of Tennessee and Kentucky where the denomination first took shape—much like the Ozark region—symbolizing our heritage of faith, renewal, and mission.",
       giveCumberland:
         "In preparation for our independence, the congregation prayerfully affirmed the name “Korean Cumberland Presbyterian Church” at a special congregational meeting on September 21, 2014. Since then, we have continued to live out our calling as a Christ-centered community, committed to worship, fellowship, service, and the sharing of God’s grace.",
+      whatTitle:
+        "History"
     },
 
     ourTeam: {
@@ -93,12 +93,10 @@ export const translations = {
     },
 
     home: {
-      heroTitle: "교회에 관한 이야기",
-      heroSubtitle:
-        "아직 이 공간에 어떤 내용을 담아야 할지, 혹은 이 공간이 실제로 필요한지에 대해서도 명확하지 않습니다.",
+      heroTitle: "환영합니다",
       aboutServicesTitle: "서비스 소개",
       aboutServicesBody:
-        "존 파크는 실제로 당신이 종교적 이미지를 떠올릴 때 고려해보면 매우 멋진 설교를 합니다. 그는 당신이 사냥을 위해 사용할 수 없게 된 당근을 먹는 물고기라는 점을 고려해보면 말이죠.",
+        "...",
     },
 
     whoWeAre: {
@@ -110,6 +108,8 @@ export const translations = {
         "“컴벌랜드”라는 명칭은 테네시주와 켄터키주의 경계선에 위치한 지역의 이름(Ozark과 유사)으로, 본교단의 초기 형성이 그 지역을 중심으로 이루어졌기 때문에 붙여졌습니다.",
       giveCumberland:
         "교회의 이름은, 2014년 9월21일, 교회의 독립을 앞두고 임시공동의회를 통해, “컴벌랜드 한인장로교회”로 결정, 지금까지 사용하고 있습니다.",
+      whatTitle:
+        "역사"
     },
 
     ourTeam: {

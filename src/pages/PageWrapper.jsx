@@ -1,29 +1,27 @@
-import { Flex } from "@chakra-ui/react"
-import Navbar from "../components/navbar/Navbar"
+import { Fade, Flex, useDisclosure } from "@chakra-ui/react"
 import PropTypes from "prop-types";
-import Footer from "../components/footer";
+import { useEffect } from "react";
 
-const PageWrapper = ({ children, height, width }) => {
+const PageWrapper = ({ children }) => {
+  const { isOpen, onOpen } = useDisclosure();
+
+  useEffect(() => {
+    requestAnimationFrame(onOpen);
+  }, []);
+
   return (
-    <Flex
-      flexDirection="column"
-      minH="100vh"
-      h={height ?? '100%'}
-      w={width ?? '100%'}
-    >
-      <Navbar />
+    <Fade in={isOpen} transition={{ enter: { duration: 0.6 } }}>
       <Flex sx={{ flexDirection: 'column', flex: 1 }}>
         {children}
       </Flex>
-      <Footer />
-    </Flex>
+    </Fade>
   )
 }
 
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default PageWrapper;

@@ -3,8 +3,11 @@ import { Box, Text, Divider } from '@chakra-ui/react';
 import GoogleMapSection from "../components/maps/GoogleMapSection";
 import ImageRotator from '../components/Image/ImageRotator';
 import { translate } from '../components/languages/translations';
+import { boxShadow, BubbleText } from '../components/BubbleTextOverlay';
 
 const Homepage = () => {
+  document.title = translate('nav.home')
+
   const position = {lat: 37.13683574512634, lng: -93.26230885169069}
 
   const images = [
@@ -19,21 +22,23 @@ const Homepage = () => {
         <Box w="100%" h={{ base: "260px", md: "360px", lg: "45rem" }} overflow="hidden">
           <ImageRotator images={images} />
         </Box>
-        
-        <Box display="flex" alignItems="center" w="100%" my="1rem" mx="auto">
+        <Box display="flex" alignItems="center" w="100%" mx="auto">
           <Divider flex="1" borderColor="#aedeea" />
         </Box>
-
-        <Box w="70%" h="500px" background="#ffffff" p="20px" mb="50px" alignItems="center" mx="auto">
-          <Text fontSize="3rem" fontWeight="bold" color="black" textAlign="left">
+        <Box
+          w="100%"
+          py={{ base: '3rem', md: '5rem' }}
+          px="20px"
+        >
+          <Text textStyle='h0' textAlign="center">
             {translate('home.heroTitle')}
           </Text>
-          <Text fontSize="2rem" color="black" textAlign="left">
+          {/* <Text fontSize="clamp(1.25rem, 3vw, 2rem)" color="black" textAlign="center">
             {translate('home.heroSubtitle')}
-          </Text>       
+          </Text>        */}
         </Box>
-
-        <Box display="flex" alignItems="center" w="90%" my="3rem" mx="auto">
+        
+        <Box display="flex" alignItems="center" w="90%" mb="3rem" mx="auto">
           <Divider flex="1" borderColor="#aedeea" />
             <Text mx="1.5rem" fontSize="1.25rem" fontWeight="500" letterSpacing="0.15em" whiteSpace="nowrap">
               CUMBERLAND CHURCH
@@ -41,18 +46,37 @@ const Homepage = () => {
           <Divider flex="1" borderColor="#aedeea" />
         </Box>
 
-        <Box display="flex" justifyContent="space-between" alignItems="flex-start" p="0 2%" mb="40px">
-          <Box w="59%" h="400px" background="#f7f5f2" p="20px" mb="50px" borderRadius="2xl">
-            <Text fontSize="3rem" fontWeight="bold" color="black" textAlign="left">
+        <Box
+          display="flex"
+          flexDirection={{ base: 'column', md: 'row' }}
+          justifyContent="space-between"
+          alignItems="center"
+          px="2%"
+          mb={{ base: '2rem', md: '40px' }}
+          gap={{ base: '2rem', md: '0' }}
+        >
+          <BubbleText
+            w={{ base: '100%', md: '59%' }}
+            h={{ base: '300px', md: '400px' }}
+            bg='accent2'
+            p="20px"
+          >
+            <Text textStyle="h2" textAlign="left">
               {translate('home.aboutServicesTitle')}
             </Text>
-            <Text fontSize="1.5rem" color="black" textAlign="left">
+            <Text textStyle="h3" fontWeight='normal' color="black" textAlign="left">
               {translate('home.aboutServicesBody')}
             </Text>
+          </BubbleText>
+          <Box
+            w={{ base: '100%', md: '39%' }}
+            h={{ base: '300px', md: '400px' }}
+            display='flex'
+            justifyContent='center'
+            boxShadow={boxShadow}
+          >
+            <GoogleMapSection center={position} />
           </Box>
-        <Box w="39%" h="400px">
-          <GoogleMapSection center={position} />
-        </Box>
         </Box>
       </Box>
     </PageWrapper>
